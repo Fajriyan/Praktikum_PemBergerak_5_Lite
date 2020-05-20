@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Updet">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#1999d7"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="serif"
+            android:text="UPDATE, DELETE BARANG"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#fff"
+            android:text=" Update dan Delete Akan Disimpan Pada Sistem"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Nomor"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Nama"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Merk"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Harga"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       android:verticalScrollbarPosition="right"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           >
+
+           <ListView
+               android:id="@+id/nomer_list"
+               android:layout_width="wrap_content"
+               android:layout_height="188dp"
+               android:layout_gravity="center"
+               android:layout_weight="1"
+               android:cacheColorHint="#FFFFFF" />
+           <ListView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:id="@+id/nama_list"
+               android:textAlignment="center"
+               android:gravity="center_horizontal"
+               android:layout_weight="1" />
+           <ListView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:id="@+id/merk_list"
+               android:textAlignment="center"
+               android:gravity="center_horizontal"
+               android:layout_weight="1" />
+
+           <ListView
+               android:id="@+id/harga_list"
+               android:layout_width="wrap_content"
+               android:layout_height="201dp"
+               android:layout_weight="1"
+               android:gravity="center_horizontal"
+               android:textAlignment="center" />
+
+       </LinearLayout>
+   </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#1999d7"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="UPDATE DATA"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/id_utama"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="ID"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/updet_nama"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:hint="Nama Brang"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/updet_merk"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:hint="Merk Barang"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/updet_harga"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:hint="Harga Barang"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textColorHint="#000000" />
+
+        <Button
+            android:id="@+id/button_updet"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="ganti"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#1999d7"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="DELETE DATA"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/id_delete"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:hint="ID"
+        android:maxLength="16"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:textColorHint="#000000" />
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="HAPUS"
+        android:textColor="#000000" />
+
+</LinearLayout>
